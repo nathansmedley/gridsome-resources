@@ -1,0 +1,19 @@
+{
+  "name": "gridsome-resources",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/cli": "^0.3.4",
+    "@gridsome/source-wordpress": "^0.5.0",
+    "gridsome": "^0.7.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.3",
+    "style-resources-loader": "^1.4.1"
+  }
+}

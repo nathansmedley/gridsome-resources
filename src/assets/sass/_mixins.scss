@@ -1,0 +1,479 @@
+///// Media Queries /////
+
+$mobile-width: 530px;
+$tablet-width: 768px;
+$lgtablet-width: 1024px;
+$smdesktop-width: 1280px;
+$desktop-width: 1701px; //Mark, asked to change from 1440 cause site was too big on laptops
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$lgtablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin lgtablet {
+  @media (min-width: #{$lgtablet-width}) and (max-width: #{$smdesktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin smdesktop {
+  @media (min-width: #{$smdesktop-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+//Query to target Edge version < 79
+@mixin edge {
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
+}
+
+///// Margin ////
+
+@mixin margin {
+  margin: 0 auto;
+  max-width: 1140px;
+  @include smdesktop { max-width: 960px; }
+  @include lgtablet { max-width: 720px; }
+  @include tablet { max-width: 540px; }
+  @include mobile { max-width: 345px; }
+}
+
+///// Padding ///// 
+
+@mixin paddingTop {
+  padding-top: 120px;
+  @include smdesktop { padding-top: 100px;}
+  @include lgtablet { padding-top: 85px;}
+  @include tablet { padding-top: 90px;}
+  @include mobile { padding-top: 60px;}
+}
+
+@mixin paddingBottom {
+  padding-bottom: 120px;
+  @include smdesktop { padding-bottom: 100px;}
+  @include lgtablet { padding-bottom: 85px;}
+  @include tablet { padding-bottom: 90px;}
+  @include mobile { padding-bottom: 60px;}
+}
+
+///// Typography /////
+
+//Fonts
+
+@mixin font-publico($font-size, $line-height, $font-weight: 400, $letter-spacing: 0px) {
+  font-family: $publico;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;    
+}
+
+@mixin font-opensans($font-size, $line-height, $font-weight: 400, $letter-spacing: 0px) {
+  font-family: $opensans;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;    
+}
+
+@mixin font-suomi($font-size, $line-height, $font-weight: 400, $letter-spacing: 0px) {
+  font-family: $suomi;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;    
+}
+
+//Font Classes
+
+@mixin p-60 {
+  @include desktop { @include font-publico(60px, 73px); }
+  @include smdesktop { @include font-publico(50px, 63px); }
+  @include lgtablet { @include font-publico(50px, 63px); }
+  @include tablet { @include font-publico(40px, 53px); }
+  @include mobile { @include font-publico(30px, 43px); }
+}
+
+@mixin p-50 {
+  @include desktop { @include font-publico(50px, 63px); }
+  @include smdesktop { @include font-publico(40px, 53px); }
+  @include lgtablet { @include font-publico(30px, 43px); }
+  @include tablet { @include font-publico(30px, 43px); }
+  @include mobile { @include font-publico(30px, 43px); }
+}
+
+@mixin p-40 {
+  @include desktop { @include font-publico(40px, 53px); }
+  @include smdesktop { @include font-publico(30px, 43px); }
+  @include lgtablet { @include font-publico(30px, 43px); }
+  @include tablet { @include font-publico(26px, 39px); }
+  @include mobile { @include font-publico(30px, 43px); }
+}
+
+@mixin p-40-nav {
+  @include desktop { @include font-publico(40px, 53px); }
+  @include smdesktop { @include font-publico(30px, 43px); }
+  @include lgtablet { @include font-publico(26px, 39px); }
+  @include tablet { @include font-publico(23px, 30px); }
+  @include mobile { @include font-publico(23px, 30px); }
+}
+
+@mixin p-30 {
+  @include desktop { @include font-publico(30px, 43px); }
+  @include smdesktop { @include font-publico(23px, 30px); }
+  @include lgtablet { @include font-publico(20px, 27px); }
+  @include tablet { @include font-publico(20px, 27px); }
+  @include mobile { @include font-publico(22px, 29px); }
+}
+
+@mixin p-26-500 {
+  @include desktop { @include font-publico(26px, 33px, 500); }
+  @include smdesktop { @include font-publico(23px, 30px, 500); }
+  @include lgtablet { @include font-publico(19px, 26px, 500); }
+  @include tablet { @include font-publico(20px, 27px, 500); }
+  @include mobile { @include font-publico(22px, 29px, 500); }
+}
+
+@mixin p-26 {
+  @include desktop { @include font-publico(26px, 33px); }
+  @include smdesktop { @include font-publico(23px, 30px); }
+  @include lgtablet { @include font-publico(19px, 26px); }
+  @include tablet { @include font-publico(20px, 27px); }
+  @include mobile { @include font-publico(22px, 29px); }
+}
+
+@mixin p-23 {
+  @include desktop { @include font-publico(23px, 26px); }
+  @include smdesktop { @include font-publico(20px, 27px); }
+  @include lgtablet { @include font-publico(20px, 27px); }
+  @include tablet { @include font-publico(16px, 23px); }
+  @include mobile { @include font-publico(17px, 24px); }
+}
+
+@mixin p-23-500 {
+  @include desktop { @include font-publico(23px, 26px, 500); }
+  @include smdesktop { @include font-publico(20px, 27px, 500); }
+  @include lgtablet { @include font-publico(20px, 27px, 500); }
+  @include tablet { @include font-publico(16px, 23px, 500); }
+  @include mobile { @include font-publico(17px, 24px, 500); }
+}
+
+@mixin p-23-nav {
+  @include desktop { @include font-publico(23px, 30px); }
+  @include smdesktop { @include font-publico(20px, 27px); }
+  @include lgtablet { @include font-publico(17px, 22px); }
+  @include tablet { @include font-publico(14px, 21px); }
+  @include mobile { @include font-publico(17px, 24px); }
+}
+
+@mixin p-23-footer {
+  @include desktop { @include font-publico(23px, 30px); }
+  @include smdesktop { @include font-publico(23px, 30px); }
+  @include lgtablet { @include font-publico(23px, 30px); }
+  @include tablet { @include font-publico(20px, 27px); }
+  @include mobile { @include font-publico(23px, 30px); }
+}
+
+@mixin p-20-title {
+  @include desktop { @include font-publico(20px, 27px, 500); }
+  @include smdesktop { @include font-publico(17px, 24px, 500); }
+  @include lgtablet { @include font-publico(17px, 24px, 500); }
+  @include tablet { @include font-publico(17px, 24px, 500); }
+  @include mobile { @include font-publico(16px, 23px, 500); }
+}
+
+@mixin p-20 {
+  @include desktop { @include font-publico(20px, 27px); }
+  @include smdesktop { @include font-publico(17px, 24px); }
+  @include lgtablet { @include font-publico(14px, 21px); }
+  @include tablet { @include font-publico(14px, 21px); }
+  @include mobile { @include font-publico(14px, 21px); }
+}
+
+@mixin p-20-form {
+  @include desktop { @include font-publico(20px, 27px); }
+  @include smdesktop { @include font-publico(20px, 27px); }
+  @include lgtablet { @include font-publico(17px, 24px); }
+  @include tablet { @include font-publico(16px, 23px); }
+  @include mobile { @include font-publico(14px, 21px); }
+}
+
+@mixin p-20-footer {
+  @include desktop { @include font-publico(20px, 27px); }
+  @include smdesktop { @include font-publico(20px, 27px); }
+  @include lgtablet { @include font-publico(16px, 23px); }
+  @include tablet { @include font-publico(14px, 21px); }
+  @include mobile { @include font-publico(16px, 23px); }
+}
+
+@mixin p-19 {
+  @include desktop { @include font-publico(19px, 26px); }
+  @include smdesktop { @include font-publico(19px, 26px); }
+  @include lgtablet { @include font-publico(14px, 21px); }
+  @include tablet { @include font-publico(14px, 21px); }
+  @include mobile { @include font-publico(14px, 21px); }
+}
+
+@mixin p-19-300 {
+  @include desktop { @include font-publico(19px, 26px, 300); }
+  @include smdesktop { @include font-publico(19px, 26px, 300); }
+  @include lgtablet { @include font-publico(14px, 21px, 300); }
+  @include tablet { @include font-publico(14px, 21px, 300); }
+  @include mobile { @include font-publico(14px, 21px); }
+}
+
+@mixin p-18 {
+  @include desktop { @include font-publico(18px, 25px); }
+  @include smdesktop { @include font-publico(16px, 23px); }
+  @include lgtablet { @include font-publico(15px, 21px); }
+  @include tablet { @include font-publico(14px, 21px); }
+  @include mobile { @include font-publico(12px, 19px); }
+}
+
+@mixin p-18-500 {
+  @include desktop { @include font-publico(18px, 25px, 500); }
+  @include smdesktop { @include font-publico(16px, 23px, 500); }
+  @include lgtablet { @include font-publico(15px, 21px, 500); }
+  @include tablet { @include font-publico(14px, 21px, 500); }
+  @include mobile { @include font-publico(12px, 19px, 500); }
+}
+
+@mixin p-form-cta {
+  @include desktop { @include font-publico(18px, 26px); }
+  @include smdesktop { @include font-publico(18px, 26px); }
+  @include lgtablet { @include font-publico(14px, 21px); }
+  @include tablet { @include font-publico(14px, 21px); }
+  @include mobile { @include font-publico(14px, 21px); }
+}
+
+@mixin p-16 {
+  @include desktop { @include font-publico(16px, 23px); }
+  @include smdesktop { @include font-publico(16px, 23px); }
+  @include lgtablet { @include font-publico(14px, 21px); }
+  @include tablet { @include font-publico(13px, 20px); }
+  @include mobile { @include font-publico(13px, 20px); }
+}
+
+@mixin p-20-topnav {
+  @include desktop { @include font-publico(20px, 23px); }
+  @include smdesktop { @include font-publico(16px, 23px); }
+  @include lgtablet { @include font-publico(16px, 23px); }
+  @include tablet { @include font-publico(16px, 23px); }
+  @include mobile { @include font-publico(16px, 23px); }
+}
+
+@mixin p-15-nav {
+  @include desktop { @include font-publico(15px, 22px); }
+  @include smdesktop { @include font-publico(12px, 19px); }
+  @include lgtablet { @include font-publico(10px, 14px); }
+  @include tablet { @include font-publico(8px, 11px); }
+  @include mobile { @include font-publico(16px, 23px); }
+}
+
+@mixin p-14 {
+  @include desktop { @include font-publico(14px, 21px); }
+  @include smdesktop { @include font-publico(14px, 21px); }
+  @include lgtablet { @include font-publico(14px, 21px); }
+  @include tablet { @include font-publico(14px, 21px); }
+  @include mobile { @include font-publico(14px, 21px); }
+}
+
+@mixin p-14-500 {
+  @include desktop { @include font-publico(14px, 21px, 500); }
+  @include smdesktop { @include font-publico(14px, 21px, 500); }
+  @include lgtablet { @include font-publico(14px, 21px, 500); }
+  @include tablet { @include font-publico(14px, 21px, 500); }
+  @include mobile { @include font-publico(14px, 21px, 500); }
+}
+
+@mixin s-94 {
+  @include desktop { @include font-suomi(94px, 73px); }
+  @include smdesktop { @include font-suomi(79px, 63px); }
+  @include lgtablet { @include font-suomi(79px, 63px); }
+  @include tablet { @include font-suomi(63px, 53px); }
+  @include mobile { @include font-suomi(48px, 43px); }
+}
+
+@mixin s-79 {
+  @include desktop { @include font-suomi(79px, 63px); }
+  @include smdesktop { @include font-suomi(63px, 53px); }
+  @include lgtablet { @include font-suomi(48px, 43px); }
+  @include tablet { @include font-suomi(48px, 43px); }
+  @include mobile { @include font-suomi(48px, 43px); }
+}
+
+@mixin s-48 {
+  @include desktop { @include font-suomi(48px, 43px); }
+  @include smdesktop { @include font-suomi(48px, 43px); }
+  @include lgtablet { @include font-suomi(42px, 39px); }
+  @include tablet { @include font-suomi(42px, 39px); }
+  @include mobile { @include font-suomi(42px, 39px); }
+}
+
+@mixin o-19 {
+  @include desktop { @include font-opensans(19px, 29px); }
+  @include smdesktop { @include font-opensans(16px, 26px); }
+  @include lgtablet { @include font-opensans(16px, 26px); }
+  @include tablet { @include font-opensans(16px, 26px); }
+  @include mobile { @include font-opensans(14px, 24px); }
+}
+
+@mixin o-19-300 {
+  @include desktop { @include font-opensans(19px, 29px, 300); }
+  @include smdesktop { @include font-opensans(16px, 26px, 300); }
+  @include lgtablet { @include font-opensans(16px, 26px, 300); }
+  @include tablet { @include font-opensans(16px, 26px, 300); }
+  @include mobile { @include font-opensans(14px, 24px); }
+}
+
+@mixin o-19-600 {
+  @include desktop { @include font-opensans(19px, 29px, 600); }
+  @include smdesktop { @include font-opensans(16px, 26px, 600); }
+  @include lgtablet { @include font-opensans(16px, 26px, 600); }
+  @include tablet { @include font-opensans(16px, 26px, 600); }
+  @include mobile { @include font-opensans(14px, 24px, 600); }
+}
+
+@mixin o-19-700 {
+  @include desktop { @include font-opensans(19px, 29px, 700); }
+  @include smdesktop { @include font-opensans(16px, 26px, 700); }
+  @include lgtablet { @include font-opensans(16px, 26px, 600); }
+  @include tablet { @include font-opensans(16px, 26px, 600); }
+  @include mobile { @include font-opensans(14px, 24px, 600); }
+}
+
+@mixin o-17 {
+  @include desktop { @include font-opensans(17px, 27px); }
+  @include smdesktop { @include font-opensans(15px, 25px); }
+  @include lgtablet { @include font-opensans(14px, 24px); }
+  @include tablet { @include font-opensans(14px, 24px); }
+  @include mobile { @include font-opensans(14px, 21px); }
+}
+
+@mixin o-17-600 {
+  @include desktop { @include font-opensans(17px, 27px, 600); }
+  @include smdesktop { @include font-opensans(15px, 25px, 600); }
+  @include lgtablet { @include font-opensans(14px, 24px, 600); }
+  @include tablet { @include font-opensans(14px, 24px, 600); }
+  @include mobile { @include font-opensans(14px, 21px, 600); }
+}
+
+@mixin o-17-300 {
+  @include desktop { @include font-opensans(17px, 27px, 300); }
+  @include smdesktop { @include font-opensans(15px, 25px, 300); }
+  @include lgtablet { @include font-opensans(14px, 24px, 300); }
+  @include tablet { @include font-opensans(14px, 24px, 300); }
+  @include mobile { @include font-opensans(14px, 21px); }
+}
+
+@mixin o-16 {
+  @include desktop { @include font-opensans(16px, 26px); }
+  @include smdesktop { @include font-opensans(13px, 23px); }
+  @include lgtablet { @include font-opensans(13px, 23px); }
+  @include tablet { @include font-opensans(13px, 23px); }
+  @include mobile { @include font-opensans(13px, 23px); }
+}
+
+@mixin o-16-600 {
+  @include desktop { @include font-opensans(16px, 26px, 600); }
+  @include smdesktop { @include font-opensans(13px, 23px, 600); }
+  @include lgtablet { @include font-opensans(13px, 23px, 600); }
+  @include tablet { @include font-opensans(13px, 23px, 600); }
+  @include mobile { @include font-opensans(13px, 23px, 600); }
+}
+
+@mixin o-16-300 {
+  @include desktop { @include font-opensans(16px, 26px, 300); }
+  @include smdesktop { @include font-opensans(13px, 23px, 300); }
+  @include lgtablet { @include font-opensans(13px, 23px, 300); }
+  @include tablet { @include font-opensans(13px, 23px, 300); }
+  @include mobile { @include font-opensans(13px, 23px); }
+}
+
+@mixin o-16-footer {
+  @include desktop { @include font-opensans(16px, 26px); }
+  @include smdesktop { @include font-opensans(16px, 26px); }
+  @include lgtablet { @include font-opensans(13px, 23px); }
+  @include tablet { @include font-opensans(11px, 21px); }
+  @include mobile { @include font-opensans(14px, 24px); }
+}
+
+@mixin o-15-nav {
+  @include desktop { @include font-opensans(15px, 25px, 300); }
+  @include smdesktop { @include font-opensans(13px, 23px, 300); }
+  @include lgtablet { @include font-opensans(13px, 23px, 300); }
+  @include tablet { @include font-opensans(11px, 21px, 300); }
+  @include mobile { @include font-opensans(14px, 21px); }
+}
+
+@mixin o-15-300 {
+  @include desktop { @include font-opensans(15px, 25px, 300); }
+  @include smdesktop { @include font-opensans(13px, 23px, 300); }
+  @include lgtablet { @include font-opensans(13px, 23px, 300); }
+  @include tablet { @include font-opensans(11px, 21px, 300); }
+  @include mobile { @include font-opensans(14px, 21px); }
+}
+
+@mixin o-13-footer {
+  @include desktop { @include font-opensans(13px, 23px, 600); }
+  @include smdesktop { @include font-opensans(13px, 23px); }
+  @include lgtablet { @include font-opensans(13px, 23px); }
+  @include tablet { @include font-opensans(11px, 21px); }
+  @include mobile { @include font-opensans(14px, 24px); }
+}
+
+@mixin o-13-form {
+  @include desktop { @include font-opensans(13px, 23px, 600); }
+  @include smdesktop { @include font-opensans(13px, 23px, 600); }
+  @include lgtablet { @include font-opensans(11px, 21px); }
+  @include tablet { @include font-opensans(11px, 21px); }
+  @include mobile { @include font-opensans(10px, 20px); }
+}
+
+@mixin o-13 {
+  @include desktop { @include font-opensans(13px, 23px, 600); }
+  @include smdesktop { @include font-opensans(11px, 21px); }
+  @include lgtablet { @include font-opensans(13px, 23px); }
+  @include tablet { @include font-opensans(13px, 23px); }
+  @include mobile { @include font-opensans(13px, 23px); }
+}
+
+@mixin o-13-300 {
+  @include desktop { @include font-opensans(13px, 23px, 300); }
+  @include smdesktop { @include font-opensans(11px, 21px, 300); }
+  @include lgtablet { @include font-opensans(13px, 23px, 300); }
+  @include tablet { @include font-opensans(13px, 23px, 300); }
+  @include mobile { @include font-opensans(13px, 23px); }
+}
+
+@mixin o-11 {
+  @include desktop { @include font-opensans(11px, 15px); }
+  @include smdesktop { @include font-opensans(11px, 15px); }
+  @include lgtablet { @include font-opensans(11px, 15px); }
+  @include tablet { @include font-opensans(11px, 15px); }
+  @include mobile { @include font-opensans(11px, 15px); }
+}
+
+@mixin o-11-300 {
+  @include desktop { @include font-opensans(11px, 15px, 300); }
+  @include smdesktop { @include font-opensans(11px, 15px, 300); }
+  @include lgtablet { @include font-opensans(11px, 15px, 300); }
+  @include tablet { @include font-opensans(11px, 15px, 300); }
+  @include mobile { @include font-opensans(11px, 15px); }
+}

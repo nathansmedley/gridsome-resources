@@ -1,0 +1,161 @@
+/* open-sans-300 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 300;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url('/fonts/open-sans-v17-latin-300.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('/fonts/open-sans-v17-latin-300.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* open-sans-regular - latin */
+@font-face { 
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: local('Open Sans Regular'), local('OpenSans-Regular'), url('/fonts/open-sans-v17-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('/fonts/open-sans-v17-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+    src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url('/fonts/open-sans-v17-latin-600.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('/fonts/open-sans-v17-latin-600.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url('/fonts/open-sans-v17-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('/fonts/open-sans-v17-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/*publico - boldest italic*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-BlackItalic-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-BlackItalic-Web.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+/*publico - boldest*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-Black-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-Black-Web.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+/*publico - bolder italic*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-ExtraboldItalic-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-ExtraboldItalic-Web.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+/*publico - bolder*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-Extrabold-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-Extrabold-Web.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+/*publico - bold italic*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-BoldItalic-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-BoldItalic-Web.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+/*publico - bold*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-Bold-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-Bold-Web.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+/*publico - thick italic*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-MediumItalic-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-MediumItalic-Web.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+/*publico - thick*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-Medium-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-Medium-Web.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+/*publico - regular italic*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-Italic-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-Italic-Web.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+/*publico - regular*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-Roman-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-Roman-Web.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+/*publico - light italic*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-LightItalic-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-LightItalic-Web.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+/*publico - light*/
+@font-face {
+    font-family: 'Publico Headline Web';
+    src: url('/fonts/PublicoHeadline-Light-Web.woff2') format('woff2'), url('/fonts/PublicoHeadline-Light-Web.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+/*suomi*/
+@font-face {
+    font-family: 'SuomiHand-Script';
+    src: url('/fonts/SuomiHand-Script.eot');
+    src: url('/fonts/SuomiHand-Script.eot') format('embedded-opentype'), url('/fonts/SuomiHand-Script.woff') format('woff'), url('/fonts/SuomiHand-Script.ttf') format('truetype');
+}
